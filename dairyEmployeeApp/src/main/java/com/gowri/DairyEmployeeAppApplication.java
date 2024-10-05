@@ -8,6 +8,7 @@ public class DairyEmployeeAppApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(DairyEmployeeAppApplication.class, args);
+		System.out.println("#########################################");
 	}
 
 }
