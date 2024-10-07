@@ -9,6 +9,8 @@ public class DairyAppApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(DairyAppApplication.class, args);
 		System.out.println("**********************************");
+		Thread.currentThread().setName("DairyAppApplication");
+		System.out.println(Thread.currentThread().getName());
 	}
 
 }
