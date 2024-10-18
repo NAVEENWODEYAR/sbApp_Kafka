@@ -24,13 +24,13 @@ public class DateUtils {
     // Calculate the number of days between two dates, handle nulls
     public long daysBetween(Optional<LocalDate> start, Optional<LocalDate> end) {
         return start.flatMap(s -> end.map(e -> ChronoUnit.DAYS.between(s, e)))
-                .orElse(0L); // Return 0 if either date is null
+                .orElse(0L);
     }
 
     // Format a LocalDate into a string, handle null
     public String formatDate(Optional<LocalDate> date) {
         return date.map(d -> d.format(DEFAULT_FORMATTER))
-                .orElse("No date provided"); // Custom message for null
+                .orElse("No date provided");
     }
 
     // Parse a string into a LocalDate, handle null input
