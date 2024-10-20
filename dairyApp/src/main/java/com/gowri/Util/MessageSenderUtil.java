@@ -1,14 +1,14 @@
 package com.gowri.Util;
 
-import javax.jms.*;
-import org.apache.activemq.ActiveMQConnectionFactory;
-import org.springframework.boot.autoconfigure.jms.activemq.ActiveMQConnectionFactoryCustomizer;
+import org.apache.activemq.ActiveMQConnectionFactory; // Make sure you import the correct class
 import org.springframework.stereotype.Component;
+
+import javax.jms.*;
+
 /*
  * @author NaveenWodeyar
  * @date 18-10-2024
  */
-
 @Component
 public class MessageSenderUtil {
     private String brokerUrl;
@@ -25,7 +25,7 @@ public class MessageSenderUtil {
         Session session = null;
         try {
             // Create a connection factory
-            ConnectionFactory connectionFactory = new ActiveMQConnectionFactoryCustomizer(brokerUrl);
+            ConnectionFactory connectionFactory = new ActiveMQConnectionFactory(brokerUrl);
 
             // Create a connection
             connection = connectionFactory.createConnection();
