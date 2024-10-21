@@ -5,6 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDateTime;
+
 /*
  * @author NaveenWodeyar
  * @date 07-10-2024
@@ -20,7 +22,7 @@ public class DairyAppTestController {
 
     @GetMapping
     public String test(){
-        log.warn("test passed");
+        log.warn("test passed at:"+ LocalDateTime.now());
         String port = environment.getProperty("server.port");
         return "DairyApp_connected running on " + port;
     }

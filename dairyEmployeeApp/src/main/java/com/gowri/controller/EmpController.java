@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.time.LocalDateTime;
+
 @RestController
 @RequestMapping("/emp")
 public class EmpController {
@@ -22,7 +24,7 @@ public class EmpController {
 
     @GetMapping
     public String testEndPoint(){
-        log.info("test endpoint accessed");
+        log.info("test endpoint accessed at: "+ LocalDateTime.now());
         String port = environment.getProperty("server.port", "8080");
         return "Dairy Employee App connected, running on port: " + port;
     }

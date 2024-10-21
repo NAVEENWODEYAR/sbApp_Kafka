@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
@@ -21,7 +22,7 @@
 		<developer>
 			<id>naveenWodeyar</id>
 			<name>Naveen Wodeyar</name>
-			<email>naveen@example.com</email> <!-- Replace with actual email -->
+			<email>naveen@example.com</email>
 			<roles>
 				<role>Java Developer</role>
 			</roles>
@@ -76,17 +77,24 @@
 			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
 			<version>2.3.0</version>
 		</dependency>
-        <dependency>
-            <groupId>org.apache.activemq</groupId>
-            <artifactId>activemq-spring-boot-starter</artifactId>
-            <version>2.4.0</version>
-        </dependency>
-        <dependency>
-            <groupId>javax.jms</groupId>
-            <artifactId>javax.jms-api</artifactId>
-            <version>2.0.1</version>
-        </dependency>
-    </dependencies>
+<!--		<dependency>-->
+<!--			<groupId>org.apache.activemq</groupId>-->
+<!--			<artifactId>activemq-spring-boot-starter</artifactId>-->
+<!--			<version>2.5.0</version> &lt;!&ndash; Updated version &ndash;&gt;-->
+<!--		</dependency>-->
+		<dependency>
+			<groupId>javax.jms</groupId>
+			<artifactId>javax.jms-api</artifactId>
+			<version>2.0.1</version>
+		</dependency>
+	</dependencies>
+
+	<repositories>
+		<repository>
+			<id>central</id>
+			<url>https://repo.maven.apache.org/maven2</url>
+		</repository>
+	</repositories>
 
 	<build>
 		<plugins>
@@ -98,5 +106,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
