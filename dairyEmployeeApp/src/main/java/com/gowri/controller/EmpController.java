@@ -26,6 +26,7 @@ public class EmpController {
     public String testEndPoint(){
         log.info("test endpoint accessed at: "+ LocalDateTime.now());
         String port = environment.getProperty("server.port", "8080");
+log.info("Running on port:"+port);
         return "Dairy Employee App connected, running on port: " + port;
     }
 }
