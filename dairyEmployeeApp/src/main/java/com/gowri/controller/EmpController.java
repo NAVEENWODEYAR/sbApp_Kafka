@@ -3,7 +3,6 @@ package com.gowri.controller;
  * @author NaveenWodeyar
  * @date 15-10-2024
  */
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +25,7 @@ public class EmpController {
     public String testEndPoint(){
         log.info("test endpoint accessed at: "+ LocalDateTime.now());
         String port = environment.getProperty("server.port", "8080");
-log.info("Running on port:"+port);
+        log.info("Running on port:"+port);
         return "Dairy Employee App connected, running on port: " + port;
     }
 }
