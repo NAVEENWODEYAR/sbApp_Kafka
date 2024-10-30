@@ -1,16 +1,15 @@
 package com.gowri.model;
+import jakarta.persistence.*;
+import java.util.Objects;
+
 /*
  * @author NaveenWodeyar
  * @date 13-10-2024
  */
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-
-import java.util.Objects;
-
-public class Dairy {
+@Entity
+@Table(name = "Dairy_Table")
+public class DairyEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -26,9 +25,9 @@ public class Dairy {
 
     private String dairyManager;
 
-    public Dairy(){}
+    public DairyEntity(){}
 
-    public Dairy(Long dairyId, String dairyName, String dairyLocation, String dairyType, String dairyCapacity, String dairyManager) {
+    public DairyEntity(Long dairyId, String dairyName, String dairyLocation, String dairyType, String dairyCapacity, String dairyManager) {
         this.dairyId = dairyId;
         this.dairyName = dairyName;
         this.dairyLocation = dairyLocation;
@@ -89,8 +88,8 @@ public class Dairy {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Dairy dairy = (Dairy) o;
-        return Objects.equals(dairyId, dairy.dairyId) && Objects.equals(dairyName, dairy.dairyName) && Objects.equals(dairyLocation, dairy.dairyLocation) && Objects.equals(dairyType, dairy.dairyType) && Objects.equals(dairyCapacity, dairy.dairyCapacity) && Objects.equals(dairyManager, dairy.dairyManager);
+        DairyEntity dairyEntity = (DairyEntity) o;
+        return Objects.equals(dairyId, dairyEntity.dairyId) && Objects.equals(dairyName, dairyEntity.dairyName) && Objects.equals(dairyLocation, dairyEntity.dairyLocation) && Objects.equals(dairyType, dairyEntity.dairyType) && Objects.equals(dairyCapacity, dairyEntity.dairyCapacity) && Objects.equals(dairyManager, dairyEntity.dairyManager);
     }
 
     @Override

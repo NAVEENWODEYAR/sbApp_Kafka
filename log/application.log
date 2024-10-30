@@ -1,4 +1,4 @@
-2024-10-13 00:00:06.604 INFO  com.gowri.DairyAppApplication - Starting DairyAppApplication using Java 21.0.2 with PID 10256 (N:\Pro\Menses\2024\Oct\dairy\dairyApp\target\classes started by NaveenWodeyar in N:\Pro\Menses\2024\Oct\dairy)
+2024-10-13 00:00:06.604 INFO  com.gowri.DairyAppApplication - Starting DairyAppApplication using Java 21.0.2 with PID 10256 (N:\Pro\Menses\2024\Oct\dairyEntity\dairyApp\target\classes started by NaveenWodeyar in N:\Pro\Menses\2024\Oct\dairyEntity)
 2024-10-13 00:00:06.617 INFO  com.gowri.DairyAppApplication - The following 1 profile is active: "dev"
 2024-10-13 00:00:06.783 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
 2024-10-13 00:00:06.783 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
@@ -24,7 +24,7 @@
 2024-10-13 00:01:55.127 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-10-13 00:01:55.152 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2024-10-13 00:01:55.275 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2024-10-13 00:02:51.509 INFO  com.gowri.DairyAppApplication - Starting DairyAppApplication using Java 21.0.2 with PID 2536 (N:\Pro\Menses\2024\Oct\dairy\dairyApp\target\classes started by NaveenWodeyar in N:\Pro\Menses\2024\Oct\dairy)
+2024-10-13 00:02:51.509 INFO  com.gowri.DairyAppApplication - Starting DairyAppApplication using Java 21.0.2 with PID 2536 (N:\Pro\Menses\2024\Oct\dairyEntity\dairyApp\target\classes started by NaveenWodeyar in N:\Pro\Menses\2024\Oct\dairyEntity)
 2024-10-13 00:02:51.519 INFO  com.gowri.DairyAppApplication - The following 1 profile is active: "dev"
 2024-10-13 00:02:51.951 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
 2024-10-13 00:02:51.951 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
@@ -34,7 +34,7 @@
 2024-10-13 00:02:59.973 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8687"]
 2024-10-13 00:02:59.987 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
 2024-10-13 00:02:59.988 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
-2024-10-13 00:03:00.212 INFO  o.a.c.c.C.[.[localhost].[/dairy] - Initializing Spring embedded WebApplicationContext
+2024-10-13 00:03:00.212 INFO  o.a.c.c.C.[.[localhost].[/dairyEntity] - Initializing Spring embedded WebApplicationContext
 2024-10-13 00:03:00.216 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 8259 ms
 2024-10-13 00:03:03.667 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
 2024-10-13 00:03:03.841 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
@@ -45,7 +45,7 @@
 2024-10-13 00:03:12.800 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
 2024-10-13 00:03:12.850 INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 14 endpoints beneath base path '/actuator'
 2024-10-13 00:03:13.207 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8687"]
-2024-10-13 00:03:13.312 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8687 (http) with context path '/dairy'
+2024-10-13 00:03:13.312 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8687 (http) with context path '/dairyEntity'
 2024-10-13 00:03:13.756 INFO  com.gowri.DairyAppApplication - Started DairyAppApplication in 24.271 seconds (process running for 26.292)
 2024-10-13 00:03:58.706 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-10-13 00:03:58.742 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
