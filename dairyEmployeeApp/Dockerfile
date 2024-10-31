@@ -1,4 +1,4 @@
-# Use an official OpenJDK runtime as a parent image
+# Use an official OpenJDK runtime as a base image
 FROM openjdk:17
 
 # Set the working directory inside the container
@@ -13,5 +13,5 @@ EXPOSE 8080
 # Add a label with the name of the application
 LABEL name="DairyEmployee"
 
-# Run the JAR file
+# Run the JAR file when the container starts
 CMD ["java", "-jar", "app.jar"]
