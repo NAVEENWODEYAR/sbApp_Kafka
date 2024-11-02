@@ -20,11 +20,14 @@ WORKDIR /app
 # Copy the JAR file from the build stage into the container
 COPY --from=build /app/target/myapp.jar app.jar
 
-# Expose the port the app runs on
-EXPOSE 8080
+# Set an environment variable for the port, defaulting to 8080
+ENV SERVER_PORT=8080
+
+# Expose the port the app runs on (defaults to the value of SERVER_PORT)
+EXPOSE $SERVER_PORT
 
 # Add a label with the name of the application
 LABEL name="DairyApp"
 
-# Run the JAR file
-CMD ["java", "-jar", "app.jar"]
+# Run the JAR file, using the environment variable for the server port
+CMD ["java", "-jar", "app.jar", "--server.port=${SERVER_PORT}"]
