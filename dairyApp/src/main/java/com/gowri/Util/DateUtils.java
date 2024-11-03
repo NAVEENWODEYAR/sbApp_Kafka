@@ -15,6 +15,7 @@ import java.util.*;
 public class DateUtils {
 
     private static final DateTimeFormatter DEFAULT_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+    private final DateTimeFormatter format = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
 
     // Get the current date and time as a formatted string
     public String getCurrentDateTime() {
@@ -37,5 +38,32 @@ public class DateUtils {
     public Optional<LocalDate> parseDate(String dateString) {
         return Optional.ofNullable(dateString)
                 .map(ds -> LocalDate.parse(ds, DEFAULT_FORMATTER));
+    }
+
+    public void exampleMethod(String fromInput, String toInput) {
+        // Debug: Print input values
+        System.out.println("From Input: " + fromInput);
+        System.out.println("To Input: " + toInput);
+
+        // Parsing 'from' date to start of the day
+        LocalDateTime fromDateTime = LocalDateTime.parse(fromInput, format)
+                .withHour(0)
+                .withMinute(0)
+                .withSecond(0)
+                .withNano(0);
+        Date fromDate = Date.from(fromDateTime.toInstant(ZoneOffset.UTC));
+
+        // Parsing 'to' date to end of the day
+        LocalDateTime toDateTime = LocalDateTime.parse(toInput, format)
+                .withHour(23)
+                .withMinute(59)
+                .withSecond(59)
+                .withNano(0);
+        Date toDate = Date.from(toDateTime.toInstant(ZoneOffset.UTC));
+
+        // Debug outputs
+        System.out.println("Parsed fromDate (UTC): " + fromDate);
+        System.out.println("Parsed toDate (UTC): " + toDate);
+
     }
 }
