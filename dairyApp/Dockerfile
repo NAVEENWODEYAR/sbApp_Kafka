@@ -31,3 +31,6 @@ LABEL name="DairyApp"
 
 # Run the JAR file, using the environment variable for the server port
 CMD ["java", "-jar", "app.jar", "--server.port=${SERVER_PORT}"]
+
+# Run the JAR file with the Spring profile and server port as environment variables
+CMD ["java", "-Dspring.profiles.active=${SPRING_PROFILES_ACTIVE}", "-jar", "app.jar", "--server.port=${SERVER_PORT}"]
